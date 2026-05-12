@@ -1,0 +1,70 @@
+{
+  "pack_name": "content_fill_demo_pack",
+  "version": "1.0",
+  "matching_mode": "content_text_driven",
+  "assets": [
+    {
+      "id": "1",
+      "file": "assets/1.png",
+      "type": "background",
+      "display_name": "背景1",
+      "aliases": ["背景1", "1"],
+      "usage": "background_style_source"
+    },
+    {
+      "id": "A",
+      "file": "assets/A.png",
+      "type": "character",
+      "display_name": "角色A",
+      "aliases": ["角色A", "A"]
+    },
+    {
+      "id": "B",
+      "file": "assets/B.png",
+      "type": "character",
+      "display_name": "角色B",
+      "aliases": ["角色B", "B"]
+    },
+    {
+      "id": "C",
+      "file": "assets/C.png",
+      "type": "character",
+      "display_name": "角色C",
+      "aliases": ["角色C", "C"]
+    },
+    {
+      "id": "D",
+      "file": "assets/D.png",
+      "type": "material",
+      "display_name": "材料D",
+      "aliases": ["材料D", "D"]
+    },
+    {
+      "id": "E",
+      "file": "assets/E.png",
+      "type": "material",
+      "display_name": "材料E",
+      "aliases": ["材料E", "E"]
+    },
+    {
+      "id": "F",
+      "file": "assets/F.png",
+      "type": "material",
+      "display_name": "材料F",
+      "aliases": ["材料F", "F"]
+    }
+  ],
+  "matching_rules": {
+    "match_by_text": true,
+    "match_fields": ["display_name", "aliases"],
+    "type_constraints": {
+      "character_content": ["character"],
+      "material_content": ["material"],
+      "background": ["background"]
+    },
+    "if_no_match": "leave_empty_or_placeholder",
+    "do_not_guess_unlisted_assets": true,
+    "do_not_swap_types": true,
+    "do_not_modify_content_text": true
+  }
+}
